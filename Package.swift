@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/adaptyteam/AdaptySDK-iOS.git", .upToNextMajor(from: "2.2.0")),
-        .package(url: "https://github.com/luma-ai-team/LumaKit.git", branch: "master"),
+        .package(url: "https://github.com/luma-ai-team/LumaKit.git", branch: "main"),
         .package(url: "https://github.com/disabled/GenericModule", branch: "master")
     ],
     targets: [

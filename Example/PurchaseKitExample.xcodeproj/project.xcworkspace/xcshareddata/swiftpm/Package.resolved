@@ -26,6 +26,15 @@
         "branch" : "master",
         "revision" : "2f0f7610aec94261b6e58bd52a5ed2e1127eeb19"
       }
+    },
+    {
+      "identity" : "lumakit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/luma-ai-team/LumaKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "893af238b6bcf73c769804d232afae32d9c0a647"
+      }
     }
   ],
   "version" : 2
