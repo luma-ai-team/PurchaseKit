@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "adaptysdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adaptyteam/AdaptySDK-iOS.git",
+      "state" : {
+        "revision" : "a1896673135dab381c641fdb6931c4e498e02df4",
+        "version" : "2.7.0"
+      }
+    },
+    {
+      "identity" : "genericmodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/disabled/GenericModule",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8bf4326c905e722b956d467d31ca483a406e0788"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2f0f7610aec94261b6e58bd52a5ed2e1127eeb19"
+      }
+    }
+  ],
+  "version" : 2
+}
