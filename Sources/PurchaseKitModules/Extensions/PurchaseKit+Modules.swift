@@ -12,5 +12,6 @@ public extension PurchaseKit {
     func registerDefaultModules() {
         PurchaseKit.shared.register(BasicViewController.self)
         PurchaseKit.shared.register(ReviewViewController.self)
+        PurchaseKit.shared.register(SingleSubscriptionViewController.self)
     }
 }

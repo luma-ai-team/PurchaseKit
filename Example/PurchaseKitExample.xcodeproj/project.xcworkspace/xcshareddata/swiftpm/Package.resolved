@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adaptyteam/AdaptySDK-iOS.git",
       "state" : {
-        "revision" : "a1896673135dab381c641fdb6931c4e498e02df4",
-        "version" : "2.7.0"
+        "revision" : "a85d0ea54a8f801bc1887fc163b4aa4835c7b551",
+        "version" : "2.9.6"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/luma-ai-team/LumaKit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "893af238b6bcf73c769804d232afae32d9c0a647"
+        "revision" : "b77b6c681611e90847f2028a20c3b539c5ab2c5c"
       }
     }
   ],

@@ -1,20 +1,44 @@
 {
-    "identifier": "paywall",
+    "identifier": "PKOnboarding",
     "pages": [
         {
-            "type": "basic",
-            "hasProducts": false,
-            "value": 0
+            "type": "BasicViewController",
+            "hasProducts": false
         },
         {
-            "type": "basic",
-            "hasProducts": false,
-            "value": 127
-        },
-        {
-            "type": "basic",
-            "hasProducts": false,
-            "value": 255
+            "type": "SingleSubscriptionViewController",
+            "title": {
+                "text": "Hello"
+            },
+            "subtitle": {
+                "text": "%fullPrice% unlock the full potential of your smile and beauty."
+            },
+            "features": [
+                {
+                    "emoji": "📸",
+                    "title": {
+                        "text": "Unlimited photo editing capabilities"
+                    }
+                },
+                {
+                    "emoji": "💄",
+                    "title": {
+                        "text": "50+ Shades of lipsticks fit for all"
+                    }
+                },
+                {
+                    "emoji": "💎",
+                    "title": {
+                        "text": "Up to 4K Image Quality results"
+                    }
+                },
+                {
+                    "emoji": "⛔",
+                    "title": {
+                        "text": "No ads or watermarks"
+                    }
+                }
+            ]
         }
     ]
 }
