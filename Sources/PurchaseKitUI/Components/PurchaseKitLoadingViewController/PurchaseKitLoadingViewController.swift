@@ -39,7 +39,7 @@ public final class PurchaseKitLoadingViewController: UIViewController {
         super.viewDidAppear(animated)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.progressView.setProgress(progress: 1.0, animation: .easeInOut(duration: 12.0))
+            self.progressView.setProgress(progress: 1.0, animation: .spring(duration: 5.0))
         }
     }
 }
