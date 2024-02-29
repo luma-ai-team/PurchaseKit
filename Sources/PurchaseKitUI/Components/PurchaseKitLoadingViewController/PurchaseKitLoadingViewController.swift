@@ -30,8 +30,8 @@ public final class PurchaseKitLoadingViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = colorScheme.background.primary
-        progressView.backgroundColor = colorScheme.background.secondary
+        view.backgroundColor = colorScheme.background.secondary
+        progressView.backgroundColor = colorScheme.background.primary
         progressView.gradient = colorScheme.gradient.primary
     }
 

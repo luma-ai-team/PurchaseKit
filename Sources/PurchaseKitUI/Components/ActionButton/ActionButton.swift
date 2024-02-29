@@ -83,7 +83,7 @@ open class ActionButton: ShimmerButton {
         animation.toValue = 4.0
         animation.autoreverses = true
         animation.timingFunction = CAMediaTimingFunction(name: .linear)
-        animation.duration = 0.75
+        animation.duration = 0.5
         animation.repeatCount = .infinity
         animation.isRemovedOnCompletion = false
         arrowImageView.layer.add(animation, forKey: animation.keyPath)

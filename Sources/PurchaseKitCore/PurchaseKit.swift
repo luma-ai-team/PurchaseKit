@@ -67,6 +67,7 @@ public final class PurchaseKit {
 
     public func present(identifier: String,
                         on viewController: UIViewController,
+                        transitionStyle: UIModalTransitionStyle = .crossDissolve,
                         bindings: PaywallBindings,
                         shouldWaitForProductFetch: Bool = true,
                         success: ((Paywall) -> Void)? = nil,
@@ -81,7 +82,12 @@ public final class PurchaseKit {
         fetch(identifier: identifier,
               shouldWaitForProductFetch: shouldWaitForProductFetch,
               success: { (paywall: Paywall) in
-            self.present(paywall: paywall, on: viewController, output: bindings, success: success, failure: failure)
+            self.present(paywall: paywall, 
+                         on: viewController,
+                         transitionStyle: transitionStyle,
+                         output: bindings,
+                         success: success,
+                         failure: failure)
         }, failure: { (error: Error) in
             failure?(error)
         })
@@ -173,6 +179,7 @@ public final class PurchaseKit {
 
     public func present(paywall: Paywall,
                         on viewController: UIViewController,
+                        transitionStyle: UIModalTransitionStyle = .crossDissolve,
                         output: PaywallModuleOutput? = nil,
                         success: ((Paywall) -> Void)? = nil,
                         failure: ((Error) -> Void)? = nil) {
@@ -199,6 +206,7 @@ public final class PurchaseKit {
         state.context = viewController
 
         let module = PaywallModule(state: state, dependencies: dependencies, output: self)
+        module.viewController.modalTransitionStyle = transitionStyle
         for submodule in submodules {
             submodule.output = module.input
         }

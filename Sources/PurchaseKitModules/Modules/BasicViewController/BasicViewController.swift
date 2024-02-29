@@ -54,12 +54,10 @@ public class BasicViewController: UIViewController, PurchaseKitModule, PurchaseK
             playerView.player = playerLooper.player
         }
 
-        view.backgroundColor = viewModel.colorScheme.background.primary
-        gradientView.gradient = .vertical(colors: [viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
-                                                   viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
-                                                   viewModel.colorScheme.background.primary],
-                                          locations: [0.0, 0.05, 1.0])
-        actionContainerView.backgroundColor = viewModel.colorScheme.background.primary
+        view.backgroundColor = viewModel.colorScheme.background.secondary
+        gradientView.gradient = .vertical(colors: [viewModel.colorScheme.background.secondary.withAlphaComponent(0.0),
+                                                   viewModel.colorScheme.background.secondary])
+        actionContainerView.backgroundColor = viewModel.colorScheme.background.secondary
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
         titleLabel.font = .systemFont(ofSize: 24.0, weight: .semibold)

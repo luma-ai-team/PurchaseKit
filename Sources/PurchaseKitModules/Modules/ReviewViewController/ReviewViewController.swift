@@ -16,7 +16,8 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         return true
     }
 
-    @IBOutlet weak var gradientView: GradientView!
+    @IBOutlet weak var bottomGradientView: GradientView!
+    @IBOutlet weak var topGradientView: GradientView!
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -41,10 +42,13 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         super.viewDidLoad()
 
         view.backgroundColor = viewModel.colorScheme.background.primary
-        gradientView.gradient = .vertical(colors: [
-            viewModel.colorScheme.background.primary.withAlphaComponent(1.0),
+        bottomGradientView.gradient = .vertical(colors: [
             viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
             viewModel.colorScheme.background.primary.withAlphaComponent(0.5)
+        ])
+        topGradientView.gradient = .vertical(colors: [
+            viewModel.colorScheme.background.primary.withAlphaComponent(1.0),
+            viewModel.colorScheme.background.primary.withAlphaComponent(0.0)
         ])
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
@@ -60,7 +64,7 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         lottieAnimationView.contentMode = .scaleAspectFill
         lottieAnimationView.loopMode = .loop
 
-        reviewStarsView.backgroundColor = viewModel.colorScheme.background.primary
+        reviewStarsView.backgroundColor = viewModel.colorScheme.background.secondary
         reviewStarsView.applyShadow(color: viewModel.colorScheme.genericAction.active)
         reviewStarsView.rating = viewModel.page.rating
 
@@ -80,7 +84,6 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         ratingLabel.alpha = 0.0
         actionButton.alpha = 0.0
 
-        actionButton.startLoading()
         actionButton.isUserInteractionEnabled = true
         DispatchQueue.main.async {
             UIView.defaultSpringAnimation(duration: 1.0, delay: 0.3, animations: {
@@ -100,19 +103,6 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
             UIView.defaultSpringAnimation(duration: 1.0, delay: 1.1, options: [.allowUserInteraction], animations: {
                 self.actionButton.alpha = 1.0
             })
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                SKStoreReviewController.requestReview(in: scene)
-            }
-            else {
-                SKStoreReviewController.requestReview()
-            }
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.actionButton.stopLoading()
         }
     }
 
@@ -134,6 +124,17 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
     // MARK: - Actions
 
     @IBAction func actionButtonPressed(_ sender: UIButton) {
-        output?.moduleDidRequestNextPage(viewModel.page)
+        actionButton.startLoading()
+
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: scene)
+        }
+        else {
+            SKStoreReviewController.requestReview()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.output?.moduleDidRequestNextPage(self.viewModel.page)
+        }
     }
 }

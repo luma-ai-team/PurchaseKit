@@ -54,11 +54,11 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
             playerView.player = playerLooper.player
         }
 
-        view.backgroundColor = viewModel.colorScheme.background.primary
-        gradientView.gradient = .vertical(colors: [viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
-                                                   viewModel.colorScheme.background.primary],
+        view.backgroundColor = viewModel.colorScheme.background.secondary
+        gradientView.gradient = .vertical(colors: [viewModel.colorScheme.background.secondary.withAlphaComponent(0.0),
+                                                   viewModel.colorScheme.background.secondary],
                                           locations: [0.0, 1.0])
-        actionContainerView.backgroundColor = viewModel.colorScheme.background.primary
+        actionContainerView.backgroundColor = viewModel.colorScheme.background.secondary
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
         titleLabel.font = .systemFont(ofSize: 32.0, weight: .semibold)
@@ -108,6 +108,7 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
     public func screenWillAppear() {
         playerLooper.play()
         dismissButton.animateIn(with: viewModel.page.closeAction)
+        linksStackView.animateIn(with: viewModel.page.closeAction)
 
         titleLabel.alpha = 0.0
         subtitleLabel.alpha = 0.0
@@ -138,9 +139,6 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
 
             UIView.defaultSpringAnimation(duration: 1.0, delay: delay, options: [.allowUserInteraction], animations: {
                 self.actionButton.alpha = 1.0
-            })
-            UIView.defaultSpringAnimation(duration: 1.0, delay: delay + 0.2, animations: {
-                self.linksStackView.alpha = 1.0
             })
         }
     }
@@ -175,7 +173,7 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
                 actionButton.configure(with: action, product: product)
             }
             else if product.introductoryOffer?.price.value == 0.0 {
-                actionButton.setTitle("Start Free Trial", for: .normal)
+                actionButton.setTitle("Try For Free", for: .normal)
             }
             else {
                 actionButton.setTitle("Continue", for: .normal)
