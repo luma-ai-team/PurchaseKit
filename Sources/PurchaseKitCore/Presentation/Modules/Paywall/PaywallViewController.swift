@@ -55,6 +55,11 @@ public final class PaywallViewController: ViewController<PaywallViewModel, Any, 
         }
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.submodules[viewModel.pageIndex].screen.screenWillAppear()
+    }
+
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
@@ -107,7 +112,10 @@ public final class PaywallViewController: ViewController<PaywallViewModel, Any, 
 
     public override func update(with viewUpdate: Update<ViewModel>, animated: Bool) {
         viewUpdate(\.pageIndex) { (index: Int) in
-            viewModel.submodules[index].screen.screenWillAppear()
+            if isVisible {
+                viewModel.submodules[index].screen.screenWillAppear()
+            }
+
             func animationCompletionHandler(_ isFinished: Bool) {
                 for (moduleIndex, module) in self.viewModel.submodules.enumerated() where moduleIndex != index {
                     module.screen.screenDidDisappear()
