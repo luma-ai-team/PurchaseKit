@@ -41,7 +41,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blF-Ft-71Y" userLabel="gradientView" customClass="GradientView" customModule="LumaKit">
-                    <rect key="frame" x="0.0" y="567" width="414" height="145"/>
+                    <rect key="frame" x="0.0" y="539" width="414" height="173"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgG-1L-7Sx" userLabel="contentContainerView">
@@ -161,7 +161,7 @@
                 <constraint firstItem="blF-Ft-71Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IdC-oq-gQL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="blF-Ft-71Y" secondAttribute="trailing" id="M0h-fB-4jT"/>
                 <constraint firstItem="5Bx-9g-3dS" firstAttribute="top" secondItem="blF-Ft-71Y" secondAttribute="bottom" id="Tzg-lX-be1"/>
-                <constraint firstItem="blF-Ft-71Y" firstAttribute="top" secondItem="EgG-1L-7Sx" secondAttribute="top" constant="-92" id="WeA-Xj-frb"/>
+                <constraint firstItem="blF-Ft-71Y" firstAttribute="top" secondItem="EgG-1L-7Sx" secondAttribute="top" constant="-120" id="WeA-Xj-frb"/>
                 <constraint firstItem="QEG-RO-wyy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aci-E1-x85"/>
                 <constraint firstItem="5Bx-9g-3dS" firstAttribute="top" secondItem="EgG-1L-7Sx" secondAttribute="bottom" id="cL8-Ba-smN"/>
                 <constraint firstItem="QEG-RO-wyy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fXg-VW-LQt"/>
