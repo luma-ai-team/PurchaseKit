@@ -28,7 +28,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsd-cA-Xm7" userLabel="lottieAnimationView" customClass="LottieAnimationView" customModule="Lottie">
                     <rect key="frame" x="0.0" y="28" width="1024" height="1138"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gsd-cA-Xm7" secondAttribute="height" multiplier="0.9" id="VR7-Uj-IFc"/>
                     </constraints>
