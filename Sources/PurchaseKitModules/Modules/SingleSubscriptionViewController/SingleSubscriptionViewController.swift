@@ -170,6 +170,16 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
             
             subtitleLabel.isHidden = false
             subtitleLabel.configure(with: viewModel.page.subtitle, product: product)
+
+            if let action = viewModel.page.action {
+                actionButton.configure(with: action, product: product)
+            }
+            else if product.introductoryOffer?.price.value == 0.0 {
+                actionButton.setTitle("Start Free Trial", for: .normal)
+            }
+            else {
+                actionButton.setTitle("Continue", for: .normal)
+            }
         }
     }
 

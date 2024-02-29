@@ -56,7 +56,7 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         subtitleLabel.isHidden = viewModel.page.hasProducts
 
         lottieAnimationView.animation = .asset("lottie-review-anim", bundle: .module)
-        lottieAnimationView.contentMode = .scaleAspectFill
+        lottieAnimationView.contentMode = .scaleAspectFit
         lottieAnimationView.loopMode = .loop
 
         reviewStarsView.backgroundColor = viewModel.colorScheme.background.primary
