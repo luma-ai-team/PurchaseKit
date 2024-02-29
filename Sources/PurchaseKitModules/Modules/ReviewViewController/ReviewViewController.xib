@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -23,40 +23,40 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsd-cA-Xm7" userLabel="lottieAnimationView" customClass="LottieAnimationView" customModule="Lottie">
-                    <rect key="frame" x="0.0" y="28" width="1024" height="1138"/>
+                    <rect key="frame" x="43" y="240.33333333333334" width="430" height="477.66666666666663"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gsd-cA-Xm7" secondAttribute="height" multiplier="0.9" id="VR7-Uj-IFc"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngD-SO-G0c" userLabel="gradientView" customClass="GradientView" customModule="LumaKit">
-                    <rect key="frame" x="0.0" y="597" width="1024" height="769"/>
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mk-1G-5iP" userLabel="titleLabel">
-                    <rect key="frame" x="25" y="48" width="974" height="38.5"/>
+                    <rect key="frame" x="25" y="83" width="380" height="38.333333333333343"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyO-wc-gK8" userLabel="subtitleLabel">
-                    <rect key="frame" x="25" y="98.5" width="974" height="17"/>
+                    <rect key="frame" x="25" y="133.33333333333334" width="380" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5/5 Stars Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yX-Xt-2T3" userLabel="ratingLabel">
-                    <rect key="frame" x="447" y="1200" width="130" height="17"/>
+                    <rect key="frame" x="150" y="752" width="130" height="17"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3k-r6-eab" userLabel="reviewStarsView" customClass="ReviewStarsView" customModule="PurchaseKitModules">
-                    <rect key="frame" x="405.5" y="1141" width="213" height="50"/>
+                    <rect key="frame" x="108.66666666666669" y="693" width="213" height="50"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="E1M-oX-I4n"/>
@@ -64,7 +64,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWx-Pp-bci" userLabel="actionButton" customClass="ActionButton" customModule="PurchaseKitUI">
-                    <rect key="frame" x="349.5" y="1246" width="325" height="60"/>
+                    <rect key="frame" x="52.666666666666657" y="798" width="325" height="60"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="DZx-WU-Wj7"/>
@@ -84,8 +84,8 @@
                 <constraint firstItem="g3k-r6-eab" firstAttribute="centerY" secondItem="gsd-cA-Xm7" secondAttribute="bottom" id="1Yy-Il-a7c"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8mk-1G-5iP" secondAttribute="trailing" constant="25" id="2CY-Xn-NoJ"/>
                 <constraint firstItem="FWx-Pp-bci" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="56v-pi-Wxz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gsd-cA-Xm7" secondAttribute="trailing" id="6qJ-Eh-2ts"/>
                 <constraint firstItem="8mk-1G-5iP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="E4f-0d-vgE"/>
+                <constraint firstItem="gsd-cA-Xm7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.2" id="KGv-ji-v16"/>
                 <constraint firstItem="5yX-Xt-2T3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Llj-hB-lNb"/>
                 <constraint firstItem="g3k-r6-eab" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MrC-w3-J6K"/>
                 <constraint firstItem="ngD-SO-G0c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RK5-gc-FfD"/>
@@ -95,13 +95,13 @@
                 <constraint firstItem="8mk-1G-5iP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="VQQ-Bp-6Ko"/>
                 <constraint firstItem="5yX-Xt-2T3" firstAttribute="top" secondItem="g3k-r6-eab" secondAttribute="bottom" constant="9" id="Vis-2g-UWL"/>
                 <constraint firstItem="FWx-Pp-bci" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="WkE-HN-OpO"/>
-                <constraint firstItem="ngD-SO-G0c" firstAttribute="top" secondItem="gsd-cA-Xm7" secondAttribute="centerY" id="XY5-OQ-Fdx"/>
+                <constraint firstItem="ngD-SO-G0c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XY5-OQ-Fdx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FWx-Pp-bci" secondAttribute="trailing" constant="40" id="Xja-by-ntz"/>
                 <constraint firstItem="FWx-Pp-bci" firstAttribute="top" secondItem="g3k-r6-eab" secondAttribute="bottom" constant="55" id="ZBN-TN-0qX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hyO-wc-gK8" secondAttribute="trailing" constant="25" id="b3N-bY-ZJp"/>
                 <constraint firstItem="hyO-wc-gK8" firstAttribute="top" secondItem="8mk-1G-5iP" secondAttribute="bottom" constant="12" id="hqT-bO-UNc"/>
-                <constraint firstItem="gsd-cA-Xm7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kV8-Qt-d8Q"/>
                 <constraint firstItem="ngD-SO-G0c" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="tsK-0m-2kI"/>
+                <constraint firstItem="gsd-cA-Xm7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="u28-gC-Zar"/>
             </constraints>
             <point key="canvasLocation" x="35.877862595419849" y="-12.67605633802817"/>
         </view>

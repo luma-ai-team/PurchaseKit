@@ -42,8 +42,9 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
 
         view.backgroundColor = viewModel.colorScheme.background.primary
         gradientView.gradient = .vertical(colors: [
+            viewModel.colorScheme.background.primary.withAlphaComponent(1.0),
             viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
-            viewModel.colorScheme.background.primary.withAlphaComponent(0.25)
+            viewModel.colorScheme.background.primary.withAlphaComponent(0.5)
         ])
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
@@ -56,7 +57,7 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         subtitleLabel.isHidden = viewModel.page.hasProducts
 
         lottieAnimationView.animation = .asset("lottie-review-anim", bundle: .module)
-        lottieAnimationView.contentMode = .scaleAspectFit
+        lottieAnimationView.contentMode = .scaleAspectFill
         lottieAnimationView.loopMode = .loop
 
         reviewStarsView.backgroundColor = viewModel.colorScheme.background.primary
