@@ -10,6 +10,7 @@ import LumaKit
 import PurchaseKitCore
 import PurchaseKitAdapty
 import PurchaseKitModules
+import PurchaseKitUI
 
 class ViewController: UIViewController {
 
