@@ -17,24 +17,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         var configuration = PurchaseKitConfiguration()
-        configuration.colorScheme.background = .init(primary: .init(rgb: 0xFFFFFF),
-                                                     secondary: .init(rgb: 0xF2F2F7))
-        configuration.colorScheme.genericAction = .init(active: .init(rgb: 0x4F83FF),
-                                                        inactive: .init(rgb: 0xA8A8BF))
-        configuration.colorScheme.gradient = .init(gradient: .horizontal(colors: [
-            .init(rgb: 0x8F00FF),
-            .init(rgb: 0x0057FF)
+        configuration.colorScheme.background = .init(primary: .p3(rgb: 0xFFFFFF),
+                                                     secondary: .p3(rgb: 0xF2F2F7))
+        configuration.colorScheme.foreground = .init(primary: .black,
+                                                     secondary: .p3(rgb: 0x6A6A7A))
+        configuration.colorScheme.genericAction = .init(active: .p3(rgb: 0x4F83FF),
+                                                        inactive: .p3(rgb: 0xD2D5E7))
+        configuration.colorScheme.gradient = .init(gradient: .vertical(colors: [
+            .p3(rgb: 0x338CFF),
+            .p3(rgb: 0x33E7FF)
         ]))
 
         configuration.appStoreApplicationIdentifier = "1454542238"
         configuration.privacyPolicyURL = .init(string: "https://google.com")
 
-//        let factory = AdaptyServiceFactory<DefaultRemoteConfig>(key: "public_live_QnCyopGl.ONWn4xULsvbDCV3z3EIT",
-//                                                                remoteConfigFallback: .init())
-//        factory.analyticsProxy = DummyAnalyticsService()
+        let factory = AdaptyServiceFactory<DefaultRemoteConfig>(key: "public_live_QnCyopGl.ONWn4xULsvbDCV3z3EIT",
+                                                                remoteConfigFallback: .init())
+        factory.analyticsProxy = DummyAnalyticsService()
 
-        let url: URL! = Bundle.main.url(forResource: "Paywall.json", withExtension: nil)
-        let factory = try! DummyPurchaseKitServiceFactory(url: url)
+//        let url: URL! = Bundle.main.url(forResource: "Paywall.json", withExtension: nil)
+//        let factory = try! DummyPurchaseKitServiceFactory(url: url)
 
         PurchaseKit.shared.registerDefaultModules()
         PurchaseKit.shared.start(with: configuration, dependencies: factory)

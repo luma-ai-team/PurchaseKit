@@ -21,6 +21,7 @@ open class ReviewPage: Page {
     public var subtitle: TextElement?
 
     public var action: ActionElement?
+    public var rating: Float
 }
 
 

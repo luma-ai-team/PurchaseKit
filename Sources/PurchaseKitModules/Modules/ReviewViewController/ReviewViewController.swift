@@ -4,6 +4,7 @@ import PurchaseKitCore
 import PurchaseKitUI
 import GenericModule
 import LumaKit
+import Lottie
 
 public class ReviewViewController: UIViewController, PurchaseKitModule, PurchaseKitScreen {
     public typealias PageType = ReviewPage
@@ -20,10 +21,10 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
 
-    @IBOutlet weak var usersImageView: UIImageView!
-    @IBOutlet weak var plusImageView: UIImageView!
+    @IBOutlet weak var lottieAnimationView: LottieAnimationView!
+    @IBOutlet weak var reviewStarsView: ReviewStarsView!
+    @IBOutlet weak var ratingLabel: UILabel!
     
-    @IBOutlet weak var reviewButton: BounceButton!
     @IBOutlet weak var actionButton: ActionButton!
 
     public required init(viewModel: PurchaseKitScreenViewModel<ReviewPage>, output: PurchaseKitModuleOutput?) {
@@ -41,45 +42,41 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
 
         view.backgroundColor = viewModel.colorScheme.background.primary
         gradientView.gradient = .vertical(colors: [
-            viewModel.colorScheme.genericAction.active.withAlphaComponent(0.25),
-            viewModel.colorScheme.genericAction.active.withAlphaComponent(0.0)
+            viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
+            viewModel.colorScheme.background.primary.withAlphaComponent(0.25)
         ])
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
-        titleLabel.font = .systemFont(ofSize: 24.0, weight: .semibold)
+        titleLabel.font = .systemFont(ofSize: 32.0, weight: .heavy)
         titleLabel.configure(with: viewModel.page.title)
 
         subtitleLabel.textColor = viewModel.colorScheme.foreground.secondary
-        subtitleLabel.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        subtitleLabel.font = .systemFont(ofSize: 14.0, weight: .medium)
         subtitleLabel.configure(with: viewModel.page.subtitle)
         subtitleLabel.isHidden = viewModel.page.hasProducts
 
-        let configuration = UIImage.SymbolConfiguration(pointSize: 12.0, weight: .semibold)
-        plusImageView.image = .init(systemName: "plus", withConfiguration: configuration)
-        plusImageView.tintColor = viewModel.colorScheme.genericAction.active
-        plusImageView.backgroundColor = viewModel.colorScheme.background.secondary
+        lottieAnimationView.animation = .asset("lottie-review-anim", bundle: .module)
+        lottieAnimationView.contentMode = .scaleAspectFill
+        lottieAnimationView.loopMode = .loop
 
-        reviewButton.backgroundColor = viewModel.colorScheme.background.secondary
-        reviewButton.tintColor = viewModel.colorScheme.genericAction.active
-        reviewButton.applyCornerRadius(value: 12.0)
-        reviewButton.applyShadow(opacity: 0.1)
+        reviewStarsView.backgroundColor = viewModel.colorScheme.background.primary
+        reviewStarsView.applyShadow(color: viewModel.colorScheme.genericAction.active)
+        reviewStarsView.rating = viewModel.page.rating
+
+        ratingLabel.textColor = viewModel.colorScheme.foreground.primary
+        ratingLabel.text = "\(viewModel.page.rating)/5 Stars Reviews"
 
         actionButton.gradient = viewModel.colorScheme.gradient.primary
         actionButton.tintColor = viewModel.colorScheme.premiumAction.active
         actionButton.configure(with: viewModel.page.action)
     }
 
-    public override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        plusImageView.applyMaximumCornerRadius()
-    }
-
     public func screenWillAppear() {
         titleLabel.alpha = 0.0
         subtitleLabel.alpha = 0.0
-        usersImageView.alpha = 0.0
-        plusImageView.alpha = 0.0
-        reviewButton.alpha = 0.0
+        lottieAnimationView.alpha = 0.0
+        reviewStarsView.alpha = 0.0
+        ratingLabel.alpha = 0.0
         actionButton.alpha = 0.0
 
         actionButton.startLoading()
@@ -92,11 +89,12 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
                 self.subtitleLabel.alpha = 1.0
             })
             UIView.defaultSpringAnimation(duration: 1.0, delay: 0.7, animations: {
-                self.usersImageView.alpha = 1.0
-                self.plusImageView.alpha = 1.0
+                self.lottieAnimationView.play()
+                self.lottieAnimationView.alpha = 1.0
             })
             UIView.defaultSpringAnimation(duration: 1.0, delay: 0.9, animations: {
-                self.reviewButton.alpha = 1.0
+                self.reviewStarsView.alpha = 1.0
+                self.ratingLabel.alpha = 1.0
             })
             UIView.defaultSpringAnimation(duration: 1.0, delay: 1.1, options: [.allowUserInteraction], animations: {
                 self.actionButton.alpha = 1.0
@@ -118,6 +116,7 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
     }
 
     public func screenDidDisappear() {
+        lottieAnimationView.stop()
         actionButton.isUserInteractionEnabled = false
     }
 
@@ -132,10 +131,6 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
     }
 
     // MARK: - Actions
-
-    @IBAction func reviewButtonPressed(_ sender: Any) {
-        output?.moduleDidRequestAppReview(viewModel.page)
-    }
 
     @IBAction func actionButtonPressed(_ sender: UIButton) {
         output?.moduleDidRequestNextPage(viewModel.page)
