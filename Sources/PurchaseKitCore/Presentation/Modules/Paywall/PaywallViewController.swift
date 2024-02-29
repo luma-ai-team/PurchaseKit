@@ -16,6 +16,10 @@ public final class PaywallViewController: ViewController<PaywallViewModel, Any, 
         case vertical
     }
 
+    public override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.showsVerticalScrollIndicator = false
@@ -31,6 +35,7 @@ public final class PaywallViewController: ViewController<PaywallViewModel, Any, 
 
     public required init(viewModel: PaywallViewModel, output: PaywallViewOutput) {
         super.init(viewModel: viewModel, output: output)
+        modalPresentationCapturesStatusBarAppearance = true
         modalPresentationStyle = .overFullScreen
         modalTransitionStyle = .crossDissolve
     }
