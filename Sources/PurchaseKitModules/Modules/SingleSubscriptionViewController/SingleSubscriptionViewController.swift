@@ -56,8 +56,8 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
 
         view.backgroundColor = viewModel.colorScheme.background.secondary
         gradientView.gradient = .vertical(colors: [viewModel.colorScheme.background.secondary.withAlphaComponent(0.0),
-                                                   viewModel.colorScheme.background.secondary],
-                                          locations: [0.0, 1.0])
+                                                   viewModel.colorScheme.background.secondary.withAlphaComponent(0.75),
+                                                   viewModel.colorScheme.background.secondary])
         actionContainerView.backgroundColor = viewModel.colorScheme.background.secondary
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary

@@ -56,6 +56,7 @@ public class BasicViewController: UIViewController, PurchaseKitModule, PurchaseK
 
         view.backgroundColor = viewModel.colorScheme.background.secondary
         gradientView.gradient = .vertical(colors: [viewModel.colorScheme.background.secondary.withAlphaComponent(0.0),
+                                                   viewModel.colorScheme.background.secondary.withAlphaComponent(0.75),
                                                    viewModel.colorScheme.background.secondary])
         actionContainerView.backgroundColor = viewModel.colorScheme.background.secondary
 

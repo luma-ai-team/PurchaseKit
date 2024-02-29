@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		556DD55E2AE0E9CF003E89DE /* Paywall.json in Resources */ = {isa = PBXBuildFile; fileRef = 556DD55D2AE0E9CF003E89DE /* Paywall.json */; };
+		559C22D22B90A9B600ACE7A3 /* paywall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */; };
+		559C22D32B90A9B600ACE7A3 /* onboarding3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */; };
+		559C22D42B90A9B600ACE7A3 /* onboarding2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22D02B90A9B600ACE7A3 /* onboarding2.mp4 */; };
+		559C22D52B90A9B600ACE7A3 /* onboarding1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22D12B90A9B600ACE7A3 /* onboarding1.mp4 */; };
 		55ACBBA42AE8FC3D00A8C98F /* PurchaseKitAdapty in Frameworks */ = {isa = PBXBuildFile; productRef = 55ACBBA32AE8FC3D00A8C98F /* PurchaseKitAdapty */; };
 		55ACBBA62AE8FC3D00A8C98F /* PurchaseKitModules in Frameworks */ = {isa = PBXBuildFile; productRef = 55ACBBA52AE8FC3D00A8C98F /* PurchaseKitModules */; };
 		55ACBBA82AE8FC3D00A8C98F /* PurchaseKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 55ACBBA72AE8FC3D00A8C98F /* PurchaseKitUI */; };
@@ -18,11 +22,14 @@
 		55BE9DFD2ADFA91200FFE81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BE9DFB2ADFA91200FFE81E /* Main.storyboard */; };
 		55BE9DFF2ADFA91300FFE81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BE9DFE2ADFA91300FFE81E /* Assets.xcassets */; };
 		55BE9E022ADFA91300FFE81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BE9E002ADFA91300FFE81E /* LaunchScreen.storyboard */; };
-		55CF2F3B2B85D3AF0002E245 /* onboarding1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 55CF2F3A2B85D3AF0002E245 /* onboarding1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		556DD55D2AE0E9CF003E89DE /* Paywall.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Paywall.json; sourceTree = "<group>"; };
+		559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = paywall.mp4; sourceTree = "<group>"; };
+		559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding3.mp4; sourceTree = "<group>"; };
+		559C22D02B90A9B600ACE7A3 /* onboarding2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding2.mp4; sourceTree = "<group>"; };
+		559C22D12B90A9B600ACE7A3 /* onboarding1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding1.mp4; sourceTree = "<group>"; };
 		55BE9DF22ADFA91200FFE81E /* PurchaseKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurchaseKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BE9DF52ADFA91200FFE81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BE9DF72ADFA91200FFE81E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +39,6 @@
 		55BE9E012ADFA91300FFE81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55BE9E032ADFA91300FFE81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55BE9E0A2ADFA94200FFE81E /* Timber */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Timber; path = ..; sourceTree = "<group>"; };
-		55CF2F3A2B85D3AF0002E245 /* onboarding1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding1.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		559C22CD2B90A9B600ACE7A3 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */,
+				559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */,
+				559C22D02B90A9B600ACE7A3 /* onboarding2.mp4 */,
+				559C22D12B90A9B600ACE7A3 /* onboarding1.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		55BE9DE92ADFA91200FFE81E = {
 			isa = PBXGroup;
 			children = (
@@ -71,11 +88,11 @@
 		55BE9DF42ADFA91200FFE81E /* PurchaseKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				559C22CD2B90A9B600ACE7A3 /* Videos */,
 				55BE9DF52ADFA91200FFE81E /* AppDelegate.swift */,
 				55BE9DF72ADFA91200FFE81E /* SceneDelegate.swift */,
 				55BE9DF92ADFA91200FFE81E /* ViewController.swift */,
 				55BE9DFB2ADFA91200FFE81E /* Main.storyboard */,
-				55CF2F3A2B85D3AF0002E245 /* onboarding1.mp4 */,
 				55BE9DFE2ADFA91300FFE81E /* Assets.xcassets */,
 				55BE9E002ADFA91300FFE81E /* LaunchScreen.storyboard */,
 				55BE9E032ADFA91300FFE81E /* Info.plist */,
@@ -163,10 +180,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559C22D22B90A9B600ACE7A3 /* paywall.mp4 in Resources */,
 				55BE9E022ADFA91300FFE81E /* LaunchScreen.storyboard in Resources */,
 				55BE9DFF2ADFA91300FFE81E /* Assets.xcassets in Resources */,
+				559C22D52B90A9B600ACE7A3 /* onboarding1.mp4 in Resources */,
+				559C22D42B90A9B600ACE7A3 /* onboarding2.mp4 in Resources */,
 				556DD55E2AE0E9CF003E89DE /* Paywall.json in Resources */,
-				55CF2F3B2B85D3AF0002E245 /* onboarding1.mp4 in Resources */,
+				559C22D32B90A9B600ACE7A3 /* onboarding3.mp4 in Resources */,
 				55BE9DFD2ADFA91200FFE81E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
