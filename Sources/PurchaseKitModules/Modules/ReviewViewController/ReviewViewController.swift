@@ -52,7 +52,7 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         ])
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
-        titleLabel.font = .systemFont(ofSize: 32.0, weight: .heavy)
+        titleLabel.font = .systemFont(ofSize: 30.0, weight: .semibold)
         titleLabel.configure(with: viewModel.page.title)
 
         subtitleLabel.textColor = viewModel.colorScheme.foreground.secondary
