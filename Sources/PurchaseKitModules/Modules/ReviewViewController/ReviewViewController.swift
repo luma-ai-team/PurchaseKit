@@ -56,7 +56,7 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         titleLabel.configure(with: viewModel.page.title)
 
         subtitleLabel.textColor = viewModel.colorScheme.foreground.secondary
-        subtitleLabel.font = .systemFont(ofSize: 14.0, weight: .medium)
+        subtitleLabel.font = .systemFont(ofSize: 15.0, weight: .semibold)
         subtitleLabel.configure(with: viewModel.page.subtitle)
         subtitleLabel.isHidden = viewModel.page.hasProducts
 
