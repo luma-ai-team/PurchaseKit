@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5546F3BE2B9595E6004BEF7F /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546F3BD2B9595E6004BEF7F /* MockProduct.swift */; };
 		556DD55E2AE0E9CF003E89DE /* Paywall.json in Resources */ = {isa = PBXBuildFile; fileRef = 556DD55D2AE0E9CF003E89DE /* Paywall.json */; };
 		559C22D22B90A9B600ACE7A3 /* paywall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */; };
 		559C22D32B90A9B600ACE7A3 /* onboarding3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5546F3BD2B9595E6004BEF7F /* MockProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProduct.swift; sourceTree = "<group>"; };
 		556DD55D2AE0E9CF003E89DE /* Paywall.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Paywall.json; sourceTree = "<group>"; };
 		559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = paywall.mp4; sourceTree = "<group>"; };
 		559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding3.mp4; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5546F3BC2B9595D9004BEF7F /* MockProduct */ = {
+			isa = PBXGroup;
+			children = (
+				5546F3BD2B9595E6004BEF7F /* MockProduct.swift */,
+			);
+			path = MockProduct;
+			sourceTree = "<group>";
+		};
 		559C22CD2B90A9B600ACE7A3 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		55BE9DF42ADFA91200FFE81E /* PurchaseKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				5546F3BC2B9595D9004BEF7F /* MockProduct */,
 				559C22CD2B90A9B600ACE7A3 /* Videos */,
 				55BE9DF52ADFA91200FFE81E /* AppDelegate.swift */,
 				55BE9DF72ADFA91200FFE81E /* SceneDelegate.swift */,
@@ -201,6 +212,7 @@
 				55BE9DFA2ADFA91200FFE81E /* ViewController.swift in Sources */,
 				55BE9DF62ADFA91200FFE81E /* AppDelegate.swift in Sources */,
 				55BE9DF82ADFA91200FFE81E /* SceneDelegate.swift in Sources */,
+				5546F3BE2B9595E6004BEF7F /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

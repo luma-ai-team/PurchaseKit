@@ -20,7 +20,8 @@ open class DummyPurchaseKitServiceFactory: PurchaseKitServiceFactory {
     public lazy var analyitcsService: AnalyticsService = DummyAnalyticsService()
     public lazy var userSettingsService: UserSettingsService = DefaultUserSettingsService()
 
-    public init(url: URL) throws {
+    public init(url: URL, products: [Product]) throws {
         paywallService = try DummyPaywallService(url: url)
+        storeService = DummyStoreService(products: products)
     }
 }

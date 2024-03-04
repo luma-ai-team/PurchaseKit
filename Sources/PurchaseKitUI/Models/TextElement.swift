@@ -144,8 +144,8 @@ extension TextElement {
         }
 
         if let suffixIndex = name.lastIndex(of: Self.fontSizeMarker) {
-            name = String(name.prefix(upTo: suffixIndex))
             let suffix = String(name.suffix(from: name.index(after: suffixIndex)))
+            name = String(name.prefix(upTo: suffixIndex))
             if let requestedSize = Double(suffix) {
                 size = CGFloat(requestedSize)
             }

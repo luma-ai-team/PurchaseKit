@@ -7,6 +7,10 @@
         },
         {
             "type": "SingleSubscriptionViewController",
+            "action": {
+                "text": "Subscribe\n%fullPrice%",
+                "fontName": "system-rounded-semibold/18.0"
+            },
             "title": {
                 "text": "Hello"
             },

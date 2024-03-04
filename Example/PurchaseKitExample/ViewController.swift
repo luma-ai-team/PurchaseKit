@@ -35,12 +35,16 @@ class ViewController: UIViewController {
         configuration.appStoreApplicationIdentifier = "1454542238"
         configuration.privacyPolicyURL = .init(string: "https://google.com")
 
-        let factory = AdaptyServiceFactory<DefaultRemoteConfig>(key: "public_live_QnCyopGl.ONWn4xULsvbDCV3z3EIT",
-                                                                remoteConfigFallback: .init())
-        factory.analyticsProxy = DummyAnalyticsService()
+//        let factory = AdaptyServiceFactory<DefaultRemoteConfig>(key: "public_live_QnCyopGl.ONWn4xULsvbDCV3z3EIT",
+//                                                                remoteConfigFallback: .init())
+//        factory.analyticsProxy = DummyAnalyticsService()
 
-//        let url: URL! = Bundle.main.url(forResource: "Paywall.json", withExtension: nil)
-//        let factory = try! DummyPurchaseKitServiceFactory(url: url)
+        let url: URL! = Bundle.main.url(forResource: "Paywall.json", withExtension: nil)
+        let product = MockProduct(price: 9.99,
+                                  duration: .init(unit: .week, count: 1),
+                                  introductoryOffer: nil)
+        let factory = try! DummyPurchaseKitServiceFactory(url: url,
+                                                          products: [.init(product: product)])
 
         PurchaseKit.shared.registerDefaultModules()
         PurchaseKit.shared.start(with: configuration, dependencies: factory)

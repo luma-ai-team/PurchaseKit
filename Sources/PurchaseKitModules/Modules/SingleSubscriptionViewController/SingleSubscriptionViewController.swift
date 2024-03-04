@@ -69,6 +69,7 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
         subtitleLabel.configure(with: viewModel.page.subtitle)
         subtitleLabel.isHidden = viewModel.page.hasProducts
 
+        actionButton.titleLabel?.numberOfLines = 0
         actionButton.gradient = viewModel.colorScheme.gradient.primary
         actionButton.tintColor = viewModel.colorScheme.premiumAction.active
         actionButton.configure(with: viewModel.page.action)
