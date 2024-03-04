@@ -141,6 +141,15 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
             UIView.defaultSpringAnimation(duration: 1.0, delay: delay, options: [.allowUserInteraction], animations: {
                 self.actionButton.alpha = 1.0
             })
+
+            if self.viewModel.page.closeAction == nil {
+                UIView.defaultSpringAnimation(duration: 1.0, 
+                                              delay: delay + 0.2,
+                                              options: [.allowUserInteraction],
+                                              animations: {
+                    self.linksStackView.alpha = 1.0
+                })
+            }
         }
     }
 
