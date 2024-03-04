@@ -61,11 +61,11 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
         actionContainerView.backgroundColor = viewModel.colorScheme.background.secondary
 
         titleLabel.textColor = viewModel.colorScheme.foreground.primary
-        titleLabel.font = .systemFont(ofSize: 32.0, weight: .semibold)
+        titleLabel.font = .systemFont(ofSize: 30.0, weight: .semibold)
         titleLabel.configure(with: viewModel.page.title)
 
         subtitleLabel.textColor = viewModel.colorScheme.foreground.secondary
-        subtitleLabel.font = .systemFont(ofSize: 16.0, weight: .semibold)
+        subtitleLabel.font = .systemFont(ofSize: 15.0, weight: .semibold)
         subtitleLabel.configure(with: viewModel.page.subtitle)
         subtitleLabel.isHidden = viewModel.page.hasProducts
 

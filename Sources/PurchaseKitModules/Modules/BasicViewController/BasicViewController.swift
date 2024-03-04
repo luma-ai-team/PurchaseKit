@@ -65,7 +65,7 @@ public class BasicViewController: UIViewController, PurchaseKitModule, PurchaseK
         titleLabel.configure(with: viewModel.page.title)
 
         subtitleLabel.textColor = viewModel.colorScheme.foreground.secondary
-        subtitleLabel.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        subtitleLabel.font = .systemFont(ofSize: 15.0, weight: .semibold)
         subtitleLabel.configure(with: viewModel.page.subtitle)
         subtitleLabel.isHidden = viewModel.page.hasProducts
 

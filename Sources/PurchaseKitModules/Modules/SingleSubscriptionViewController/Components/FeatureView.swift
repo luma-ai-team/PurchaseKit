@@ -43,7 +43,7 @@ final class FeatureView: UIView {
         emojiLabel.text = feature.emoji
 
         titleLabel.textColor = colorScheme.foreground.primary
-        titleLabel.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        titleLabel.font = .systemFont(ofSize: 15.0, weight: .semibold)
         titleLabel.configure(with: feature.title)
     }
 
