@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrialHowToView" customModule="PurchaseKitModules">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="wEN-8d-t2F"/>
+                <outlet property="gradientLineView" destination="lUH-nL-CxR" id="sce-7l-xpV"/>
+                <outlet property="stackView" destination="BtK-Sr-Fcr" id="QP4-Ha-Hun"/>
+                <outlet property="titleLabel" destination="gHo-Ay-Kk7" id="Jc5-5Q-taD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How the Free Trial works" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-Ay-Kk7" userLabel="titleLabel">
+                    <rect key="frame" x="32" y="0.0" width="166" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUH-nL-CxR" userLabel="gradientLineView" customClass="GradientView" customModule="LumaKit">
+                    <rect key="frame" x="51" y="59" width="3" height="213"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="3" id="EeI-EX-8W9"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BtK-Sr-Fcr" userLabel="stackView">
+                    <rect key="frame" x="32" y="39" width="329" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="BtK-Sr-Fcr" firstAttribute="top" secondItem="gHo-Ay-Kk7" secondAttribute="bottom" constant="22" id="0qg-L7-1UX"/>
+                <constraint firstItem="gHo-Ay-Kk7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="34t-1R-UUt"/>
+                <constraint firstItem="BtK-Sr-Fcr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="9x9-e5-KyS"/>
+                <constraint firstAttribute="bottom" secondItem="BtK-Sr-Fcr" secondAttribute="bottom" constant="13" id="FjA-MN-ewP"/>
+                <constraint firstItem="lUH-nL-CxR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="51" id="YSS-v5-GPg"/>
+                <constraint firstItem="gHo-Ay-Kk7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="Z9V-yl-Twd"/>
+                <constraint firstAttribute="trailing" secondItem="BtK-Sr-Fcr" secondAttribute="trailing" constant="32" id="hB2-iU-zDl"/>
+                <constraint firstAttribute="bottom" secondItem="lUH-nL-CxR" secondAttribute="bottom" id="qZi-Zz-aXu"/>
+                <constraint firstItem="lUH-nL-CxR" firstAttribute="top" secondItem="BtK-Sr-Fcr" secondAttribute="top" constant="20" id="zPQ-iI-4DK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="49.618320610687022" y="-216.90140845070422"/>
+        </view>
+    </objects>
+</document>

@@ -23,5 +23,3 @@ open class ReviewPage: Page {
     public var action: ActionElement?
     public var rating: Float
 }
-
-

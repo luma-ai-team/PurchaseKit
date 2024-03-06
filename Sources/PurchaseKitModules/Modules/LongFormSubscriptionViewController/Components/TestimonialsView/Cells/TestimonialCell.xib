@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TestimonialCell" customModule="PurchaseKitModules">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt4-Hx-j2R" userLabel="messageLabel">
+                    <rect key="frame" x="12" y="37" width="369" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-MP-kBK" userLabel="starStackView">
+                    <rect key="frame" x="145" y="11" width="103" height="18"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCN-52-HNx" userLabel="star1ImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="19" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="Sg6-6H-Tzs"/>
+                                <constraint firstAttribute="height" constant="18" id="fqv-Vw-YlO"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibz-wc-eky" userLabel="star2ImageView">
+                            <rect key="frame" x="21" y="0.0" width="19" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="Zce-sA-Ysn"/>
+                                <constraint firstAttribute="height" constant="18" id="t2T-xa-hbk"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Th-FV-LPn" userLabel="star3ImageView">
+                            <rect key="frame" x="42" y="0.0" width="19" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="6HG-Ti-wLC"/>
+                                <constraint firstAttribute="height" constant="18" id="mXq-Nb-0Tr"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fo2-vx-9mN" userLabel="star4ImageView">
+                            <rect key="frame" x="63" y="0.0" width="19" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="3u0-S1-ics"/>
+                                <constraint firstAttribute="height" constant="18" id="tRm-qH-Wj8"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f26-8Y-QJ0" userLabel="star5ImageView">
+                            <rect key="frame" x="84" y="0.0" width="19" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="IYW-w8-IbP"/>
+                                <constraint firstAttribute="height" constant="18" id="LjB-3T-LoU"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="f4y-th-VSb"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tt4-Hx-j2R" secondAttribute="trailing" constant="12" id="ITu-D0-x5A"/>
+                <constraint firstItem="Tt4-Hx-j2R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="Mza-sj-2mT"/>
+                <constraint firstItem="Tt4-Hx-j2R" firstAttribute="top" secondItem="YiU-MP-kBK" secondAttribute="bottom" constant="8" id="Okd-UU-ugg"/>
+                <constraint firstItem="YiU-MP-kBK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="11" id="Pyl-iN-fBx"/>
+                <constraint firstItem="YiU-MP-kBK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SXK-69-FGL"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tt4-Hx-j2R" secondAttribute="bottom" constant="8" id="UaQ-dK-c3J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageLabel" destination="Tt4-Hx-j2R" id="fhi-X7-ifZ"/>
+                <outletCollection property="starImageViews" destination="aCN-52-HNx" collectionClass="NSMutableArray" id="ttQ-gt-SIB"/>
+                <outletCollection property="starImageViews" destination="ibz-wc-eky" collectionClass="NSMutableArray" id="Ybb-6U-pP3"/>
+                <outletCollection property="starImageViews" destination="7Th-FV-LPn" collectionClass="NSMutableArray" id="vEG-hJ-YYI"/>
+                <outletCollection property="starImageViews" destination="fo2-vx-9mN" collectionClass="NSMutableArray" id="SJS-7G-Enf"/>
+                <outletCollection property="starImageViews" destination="f26-8Y-QJ0" collectionClass="NSMutableArray" id="0mn-Jo-X8o"/>
+            </connections>
+            <point key="canvasLocation" x="130.53435114503816" y="-44.014084507042256"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

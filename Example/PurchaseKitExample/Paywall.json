@@ -2,47 +2,94 @@
     "identifier": "PKOnboarding",
     "pages": [
         {
-            "type": "BasicViewController",
-            "hasProducts": false
-        },
-        {
-            "type": "SingleSubscriptionViewController",
-            "action": {
-                "text": "Subscribe\n%fullPrice%",
-                "fontName": "system-rounded-semibold/18.0"
-            },
-            "title": {
-                "text": "Hello"
-            },
-            "subtitle": {
-                "text": "%fullPrice% unlock the full potential of your smile and beauty."
-            },
+            "type": "LongFormSubscriptionViewController",
+            "asset": "paywall.mp4",
             "features": [
                 {
                     "emoji": "📸",
                     "title": {
-                        "text": "Unlimited photo editing capabilities"
+                        "text": "Advanced AI Algorithms"
                     }
                 },
                 {
                     "emoji": "💄",
                     "title": {
-                        "text": "50+ Shades of lipsticks fit for all"
+                        "text": "50+ Shades Of Lipstick"
                     }
                 },
                 {
                     "emoji": "💎",
                     "title": {
-                        "text": "Up to 4K Image Quality results"
+                        "text": "4K Export Quality"
                     }
                 },
                 {
                     "emoji": "⛔",
                     "title": {
-                        "text": "No ads or watermarks"
+                        "text": "No Ads Or Watermark"
                     }
                 }
+            ],
+            "testimonials": [
+                {
+                    "rating": 3,
+                    "message": "Yeah!"
+                },
+                {
+                    "rating": 5,
+                    "message": "It's amazing. Wonderful! Absolutely wonderful!"
+                },
+                {
+                    "rating": 1,
+                    "message": "GIVE ME MY MONEY BACK YOU GREEDY FUCKS!"
+                }
             ]
+        },
+        {
+            "type": "BasicViewController"
+        },
+        {
+            "asset": "paywall.mp4",
+            "action": {
+                "text": "Subscribe\n%fullPrice%",
+                "fontName": "system-rounded-semibold/18.0"
+            },
+            "closeAction": {
+                "delay": 3
+            },
+            "features": [
+                {
+                    "emoji": "📸",
+                    "title": {
+                        "text": "Advanced AI Algorithms"
+                    }
+                },
+                {
+                    "emoji": "💄",
+                    "title": {
+                        "text": "50+ Shades Of Lipstick"
+                    }
+                },
+                {
+                    "emoji": "💎",
+                    "title": {
+                        "text": "4K Export Quality"
+                    }
+                },
+                {
+                    "emoji": "⛔",
+                    "title": {
+                        "text": "No Ads Or Watermark"
+                    }
+                }
+            ],
+            "subtitle": {
+                "text": "Unlock the ultimate tool to enhance your beauty. Start now for %fullPrice%, Access all features."
+            },
+            "title": {
+                "text": "Glow Up Instantly"
+            },
+            "type": "SingleSubscriptionViewController"
         }
     ]
 }

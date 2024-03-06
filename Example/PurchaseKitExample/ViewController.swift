@@ -40,11 +40,29 @@ class ViewController: UIViewController {
 //        factory.analyticsProxy = DummyAnalyticsService()
 
         let url: URL! = Bundle.main.url(forResource: "Paywall.json", withExtension: nil)
-        let product = MockProduct(price: 9.99,
-                                  duration: .init(unit: .week, count: 1),
-                                  introductoryOffer: nil)
-        let factory = try! DummyPurchaseKitServiceFactory(url: url,
-                                                          products: [.init(product: product)])
+        let weeklyProduct = MockProduct(price: 4.99,
+                                        duration: .init(unit: .week, count: 1))
+        let monthlyProduct = MockProduct(price: 9.99,
+                                         duration: .init(unit: .month, count: 1))
+        let yearlyProduct = MockProduct(price: 34.99,
+                                        duration: .init(unit: .year, count: 1))
+        let weeklyTrialProduct = MockProduct(price: 4.99,
+                                        duration: .init(unit: .week, count: 1),
+                                        introductoryOffer: .init(duration: .init(unit: .day, count: 7)))
+        let monthlyTrialProduct = MockProduct(price: 9.99,
+                                         duration: .init(unit: .month, count: 1),
+                                         introductoryOffer: .init(duration: .init(unit: .day, count: 3)))
+        let yearlyTrialProduct = MockProduct(price: 34.99,
+                                        duration: .init(unit: .year, count: 1),
+                                        introductoryOffer: .init(duration: .init(unit: .day, count: 3)))
+        let factory = try! DummyPurchaseKitServiceFactory(url: url, products: [
+            .init(product: weeklyProduct),
+            .init(product: monthlyProduct),
+            .init(product: yearlyProduct),
+            .init(product: weeklyTrialProduct),
+            .init(product: monthlyTrialProduct),
+            .init(product: yearlyTrialProduct)
+        ])
 
         PurchaseKit.shared.registerDefaultModules()
         PurchaseKit.shared.start(with: configuration, dependencies: factory)

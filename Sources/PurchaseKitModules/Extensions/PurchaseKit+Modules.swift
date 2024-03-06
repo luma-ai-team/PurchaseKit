@@ -10,8 +10,9 @@ import PurchaseKitCore
 
 public extension PurchaseKit {
     func registerDefaultModules() {
-        PurchaseKit.shared.register(BasicViewController.self)
-        PurchaseKit.shared.register(ReviewViewController.self)
-        PurchaseKit.shared.register(SingleSubscriptionViewController.self)
+        register(BasicViewController.self)
+        register(ReviewViewController.self)
+        register(SingleSubscriptionViewController.self)
+        register(LongFormSubscriptionViewController.self)
     }
 }

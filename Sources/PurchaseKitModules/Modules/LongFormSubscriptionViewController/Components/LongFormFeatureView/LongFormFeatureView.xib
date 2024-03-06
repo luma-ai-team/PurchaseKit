@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LongFormFeatureView" customModule="PurchaseKitModules">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="nBe-Kp-iQm"/>
+                <outlet property="emojiContainerView" destination="hCb-ll-T8j" id="0gH-cV-OF9"/>
+                <outlet property="emojiLabel" destination="bND-xI-WOY" id="8GB-K6-J3b"/>
+                <outlet property="titleLabel" destination="vzu-jj-lvj" id="Lic-5d-8lg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCb-ll-T8j" userLabel="emojiContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📸" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bND-xI-WOY" userLabel="emojiLabel">
+                            <rect key="frame" x="1" y="0.0" width="19" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bND-xI-WOY" secondAttribute="trailing" id="Ahd-0R-6sF"/>
+                        <constraint firstAttribute="height" constant="20" id="AnT-Fx-6Nj"/>
+                        <constraint firstAttribute="bottom" secondItem="bND-xI-WOY" secondAttribute="bottom" id="Tyd-F5-jAU"/>
+                        <constraint firstAttribute="width" secondItem="hCb-ll-T8j" secondAttribute="height" id="ZbJ-yX-eGP"/>
+                        <constraint firstItem="bND-xI-WOY" firstAttribute="top" secondItem="hCb-ll-T8j" secondAttribute="top" id="ffI-nF-hRl"/>
+                        <constraint firstItem="bND-xI-WOY" firstAttribute="leading" secondItem="hCb-ll-T8j" secondAttribute="leading" constant="1" id="q18-DJ-QL9"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzu-jj-lvj" userLabel="titleLabel">
+                    <rect key="frame" x="28" y="0.0" width="365" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vzu-jj-lvj" secondAttribute="bottom" id="B49-R7-B3g"/>
+                <constraint firstItem="hCb-ll-T8j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Eum-Dd-N70"/>
+                <constraint firstItem="vzu-jj-lvj" firstAttribute="leading" secondItem="hCb-ll-T8j" secondAttribute="trailing" constant="8" id="VUV-nZ-UMr"/>
+                <constraint firstAttribute="bottom" secondItem="hCb-ll-T8j" secondAttribute="bottom" id="eXR-HR-tnh"/>
+                <constraint firstItem="hCb-ll-T8j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iec-Xm-JMP"/>
+                <constraint firstAttribute="trailing" secondItem="vzu-jj-lvj" secondAttribute="trailing" id="jlS-jT-jb3"/>
+                <constraint firstItem="vzu-jj-lvj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lc3-pg-pVs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="41.984732824427482" y="269.71830985915494"/>
+        </view>
+    </objects>
+</document>

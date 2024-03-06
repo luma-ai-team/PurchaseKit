@@ -8,6 +8,23 @@
 import Foundation
 import PurchaseKitCore
 
+public extension Product.Duration {
+    var intervalString: String {
+        switch self {
+        case .years:
+            return "Yearly"
+        case .months:
+            return "Monthly"
+        case .weeks:
+            return "Weekly"
+        case .days:
+            return "Daily"
+        case .unknown:
+            return "Surprisingly"
+        }
+    }
+}
+
 public extension Product {
 
     var subscriptionDurationString: String? {
@@ -88,9 +105,16 @@ public extension Product {
         }
     }
 
-    func durationString(for duration: Product.Duration) -> String {
+    func durationString(for duration: Product.Duration,
+                        isPluralized: Bool = true,
+                        isCapitalized: Bool = false) -> String {
         if duration == .days(7) {
-            return "1 week"
+            var unit = "week"
+            if isCapitalized {
+                unit = unit.capitalized
+            }
+
+            return "1 \(unit)"
         }
 
         let numberOfUnits: Int
@@ -107,8 +131,12 @@ public extension Product {
             return .init()
         }
 
-        let unit = unitString(for: duration)
-        let suffix = (numberOfUnits > 1) ? "s" : .init()
+        var unit = unitString(for: duration)
+        if isCapitalized {
+            unit = unit.capitalized
+        }
+        
+        let suffix = (isPluralized && (numberOfUnits > 1)) ? "s" : .init()
         return "\(numberOfUnits) \(unit)\(suffix)"
     }
 }

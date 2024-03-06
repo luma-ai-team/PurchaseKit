@@ -24,12 +24,27 @@ public final class Product {
         }
     }
 
-    public enum Duration: Equatable {
+    public enum Duration: Equatable, Comparable {
         case years(Int)
         case months(Int)
         case weeks(Int)
         case days(Int)
         case unknown
+
+        public var dayDuration: Int {
+            switch self {
+            case .years(let count):
+                return count * 365
+            case .months(let count):
+                return count * 30
+            case .weeks(let count):
+                return count * 7
+            case .days(let count):
+                return count
+            case .unknown:
+                return .max
+            }
+        }
 
         init(period: SKProductSubscriptionPeriod) {
             switch period.unit {
@@ -66,6 +81,14 @@ public final class Product {
     public let price: Price
     public internal(set) var duration: Duration? = nil
     public internal(set) var introductoryOffer: IntroductoryOffer? = nil
+
+    public var referencePrice: NSDecimalNumber {
+        guard let duration = duration else {
+            return price.value
+        }
+
+        return .init(value: price.value.floatValue / Float(duration.dayDuration))
+    }
 
     public init(product: SKProduct) {
         self.identifier = product.productIdentifier
