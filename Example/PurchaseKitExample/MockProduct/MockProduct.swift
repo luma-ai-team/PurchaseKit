@@ -17,8 +17,23 @@ final class MockSubscriptionPeriod: SKProductSubscriptionPeriod {
         return mockNumberOfUnits
     }
 
-    let mockUnit: SKProduct.PeriodUnit
-    let mockNumberOfUnits: Int
+    var unitDescription: String {
+        switch unit {
+        case .day:
+            return "day"
+        case .week:
+            return "week"
+        case .month:
+            return "month"
+        case .year:
+            return "year"
+        @unknown default:
+            return "surprise"
+        }
+    }
+
+    private let mockUnit: SKProduct.PeriodUnit
+    private let mockNumberOfUnits: Int
 
     init(unit: SKProduct.PeriodUnit, count: Int) {
         mockUnit = unit
@@ -43,7 +58,7 @@ final class MockProductDiscount: SKProductDiscount {
         return mockPaymentMode
     }
 
-    let mockPaymentMode: SKProductDiscount.PaymentMode
+    private let mockPaymentMode: SKProductDiscount.PaymentMode
     let mockDuration: MockSubscriptionPeriod
 
     init(paymentMode: SKProductDiscount.PaymentMode = .freeTrial, duration: MockSubscriptionPeriod) {
@@ -54,7 +69,13 @@ final class MockProductDiscount: SKProductDiscount {
 
 final class MockProduct: SKProduct {
     override var productIdentifier: String {
-        return "pk.product.mock"
+        var identifier: String = "pk.product.mock"
+        identifier.append("/price:\(price.floatValue)")
+        identifier.append("/duration:\(mockDuration.unitDescription)-\(mockDuration.numberOfUnits)")
+        if let offer = mockIntroductoryOffer {
+            identifier.append("/trial:\(offer.mockDuration.unitDescription)-\(offer.subscriptionPeriod.numberOfUnits)")
+        }
+        return identifier
     }
 
     override var price: NSDecimalNumber {
@@ -73,9 +94,9 @@ final class MockProduct: SKProduct {
         return mockIntroductoryOffer
     }
 
-    let mockPrice: NSDecimalNumber
-    let mockDuration: MockSubscriptionPeriod
-    let mockIntroductoryOffer: MockProductDiscount?
+    private let mockPrice: NSDecimalNumber
+    private let mockDuration: MockSubscriptionPeriod
+    private let mockIntroductoryOffer: MockProductDiscount?
 
     init(price: NSDecimalNumber,
          duration: MockSubscriptionPeriod,

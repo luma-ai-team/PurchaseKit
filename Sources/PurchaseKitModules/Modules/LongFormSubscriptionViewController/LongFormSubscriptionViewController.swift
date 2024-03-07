@@ -237,7 +237,7 @@ final class LongFormSubscriptionViewController: UIViewController, PurchaseKitMod
             trialHowToView.trialDayCount = offer.duration.dayDuration
         }
         trialSwitch.onTintColor = viewModel.colorScheme.genericAction.active
-        variantsCollectionView.isHidden = viewModel.content.products.count < 2
+        variantsCollectionView.isHidden = productPairs.count < 2
 
         if productPairs.count == 3 {
             let firstCellItem = makeSecondaryVariantCellItem(atIndex: 0)

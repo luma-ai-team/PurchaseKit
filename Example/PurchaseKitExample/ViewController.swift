@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         bindings.completionHandler = {
             print("here")
         }
-        PurchaseKit.shared.present(identifier: "PKOnboarding", 
+        PurchaseKit.shared.present(identifier: "PKOnboarding",
                                    on: self,
                                    transitionStyle: .coverVertical,
                                    bindings: bindings,

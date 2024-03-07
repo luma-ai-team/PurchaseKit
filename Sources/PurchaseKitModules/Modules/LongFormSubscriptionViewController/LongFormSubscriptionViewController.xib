@@ -134,13 +134,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="345" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable X day free trial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grp-A2-TeS" userLabel="trialLabel">
-                                                            <rect key="frame" x="7" y="16" width="147.33333333333334" height="17"/>
+                                                            <rect key="frame" x="12" y="16" width="147.33333333333334" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zCB-O1-hXr" userLabel="trialSwitch">
-                                                            <rect key="frame" x="287" y="9" width="51" height="31"/>
+                                                            <rect key="frame" x="284" y="9" width="51" height="31"/>
                                                             <connections>
                                                                 <action selector="trialSwitchValueChanged:" destination="-1" eventType="valueChanged" id="hqV-n8-JpX"/>
                                                             </connections>
@@ -148,9 +148,9 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="grp-A2-TeS" firstAttribute="leading" secondItem="9oX-NM-cZI" secondAttribute="leading" constant="7" id="9al-Wp-xir"/>
+                                                        <constraint firstItem="grp-A2-TeS" firstAttribute="leading" secondItem="9oX-NM-cZI" secondAttribute="leading" constant="12" id="9al-Wp-xir"/>
                                                         <constraint firstItem="grp-A2-TeS" firstAttribute="centerY" secondItem="9oX-NM-cZI" secondAttribute="centerY" id="CW2-va-qCg"/>
-                                                        <constraint firstAttribute="trailing" secondItem="zCB-O1-hXr" secondAttribute="trailing" constant="9" id="CqB-e3-iwE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zCB-O1-hXr" secondAttribute="trailing" constant="12" id="CqB-e3-iwE"/>
                                                         <constraint firstItem="zCB-O1-hXr" firstAttribute="centerY" secondItem="9oX-NM-cZI" secondAttribute="centerY" id="QJt-uW-Rxv"/>
                                                         <constraint firstAttribute="height" constant="49" id="mDw-eG-hHd"/>
                                                     </constraints>
