@@ -37,7 +37,7 @@ public final class AdaptyServiceFactory<Config: RemoteConfig>: PurchaseKitServic
 
     public var userSettingsService: UserSettingsService = DefaultUserSettingsService()
 
-    private let adaptyService: AdaptyService<Config>
+    public let adaptyService: AdaptyService<Config>
     public init(key: String,
                 userId: String? = nil,
                 remoteConfigFallback: Config,
