@@ -51,9 +51,20 @@ public final class AdaptyService<Config: RemoteConfig>: PaywallService, StoreSer
 
     public var analyticsProxy: AnalyticsService?
 
-    private var profile: AdaptyProfile?
+    private var profile: AdaptyProfile? {
+        didSet {
+            guard let profile = profile else {
+                return
+            }
+
+            profileUpdateHandler?(profile)
+        }
+    }
+
     private var paywalls: [String: PaywallRecord] = [:]
     private var products: [AdaptyPaywallProduct] = []
+
+    public var profileUpdateHandler: ((AdaptyProfile) -> Void)?
 
     #if targetEnvironment(simulator)
     private var shouldSimulateSubscribedState: Bool = false
