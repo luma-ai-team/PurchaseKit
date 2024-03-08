@@ -41,11 +41,11 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blF-Ft-71Y" userLabel="gradientView" customClass="GradientView" customModule="LumaKit">
-                    <rect key="frame" x="0.0" y="364" width="414" height="126.5"/>
+                    <rect key="frame" x="0.0" y="372" width="414" height="118.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEk-gg-yq7" userLabel="titleLabel">
-                    <rect key="frame" x="34.5" y="444" width="345" height="38.5"/>
+                    <rect key="frame" x="34.5" y="452" width="345" height="38.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -157,7 +157,7 @@
                 <constraint firstItem="GZo-Td-uep" firstAttribute="bottom" secondItem="5Bx-9g-3dS" secondAttribute="top" id="Auj-VF-E8v"/>
                 <constraint firstItem="5Bx-9g-3dS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EMK-ac-2pD"/>
                 <constraint firstItem="cEk-gg-yq7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Gjt-9z-t2W"/>
-                <constraint firstItem="5Bx-9g-3dS" firstAttribute="top" secondItem="cEk-gg-yq7" secondAttribute="bottom" constant="8" id="HTN-JE-E1k"/>
+                <constraint firstItem="5Bx-9g-3dS" firstAttribute="top" secondItem="cEk-gg-yq7" secondAttribute="bottom" id="HTN-JE-E1k"/>
                 <constraint firstItem="QEG-RO-wyy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aci-E1-x85"/>
                 <constraint firstItem="blF-Ft-71Y" firstAttribute="top" secondItem="cEk-gg-yq7" secondAttribute="top" constant="-80" id="bwU-Ou-RRa"/>
                 <constraint firstItem="QEG-RO-wyy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fXg-VW-LQt"/>
