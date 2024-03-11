@@ -1,0 +1,102 @@
+{
+  "identifier": "PKOnboarding",
+  "pages": [
+    {
+      "asset": "onboarding1.mp4",
+      "hasProducts": false,
+      "subtitle": {
+        "text": "With Sora AI, you can turn any idea into a video using words only."
+      },
+      "title": {
+        "text": "Turn Text to Video"
+      },
+      "type": "BasicViewController"
+    },
+    {
+      "action": {
+        "text": "Continue"
+      },
+      "asset": "onboarding2.mp4",
+      "hasProducts": false,
+      "subtitle": {
+        "text": "Transform your still images into beautiful, living moments."
+      },
+      "title": {
+        "text": "Animate Still Photos"
+      },
+      "type": "BasicViewController"
+    },
+    {
+      "action": {
+        "text": "Continue"
+      },
+      "rating": 4.8,
+      "subtitle": {
+        "text": "We would love to get a review from you so we can maximize your experience."
+      },
+      "title": {
+        "text": "Help Us Grow!"
+      },
+      "type": "ReviewViewController"
+    },
+    {
+      "action": {
+        "text": "Continue"
+      },
+      "asset": "onboarding3.mp4",
+      "hasProducts": false,
+      "subtitle": {
+        "text": "Explore limitless creations from your imagination. Want flying sharks? We've got you covered!"
+      },
+      "title": {
+        "text": "Wild Imagination"
+      },
+      "type": "BasicViewController"
+    },
+    {
+      "asset": "onboarding4.mp4",
+      "closeAction": {
+        "delay": 5
+      },
+      "features": [
+        {
+          "emoji": "▶️",
+          "title": {
+            "text": "50 AI Video Credits Every Month"
+          }
+        },
+        {
+          "emoji": "⚡️",
+          "title": {
+            "text": "Make AI Videos From Text"
+          }
+        },
+        {
+          "emoji": "🖼️",
+          "title": {
+            "text": "Animate Still Photos"
+          }
+        },
+        {
+          "emoji": "💎",
+          "title": {
+            "text": "4K Output"
+          }
+        },
+        {
+          "emoji": "⛔",
+          "title": {
+            "text": "No Ads Or Watermark"
+          }
+        }
+      ],
+      "subtitle": {
+        "text": "Are you ready for the future? Start now for %fullPrice%. Explore Sora AI today."
+      },
+      "title": {
+        "text": "Start Using Sora AI"
+      },
+      "type": "SingleSubscriptionViewController"
+    }
+  ]
+}

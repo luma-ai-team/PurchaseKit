@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5546F3BE2B9595E6004BEF7F /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546F3BD2B9595E6004BEF7F /* MockProduct.swift */; };
+		55570EE22B9F0ED400284B45 /* Paywall-Single.json in Resources */ = {isa = PBXBuildFile; fileRef = 55570EE02B9F0E8B00284B45 /* Paywall-Single.json */; };
 		556DD55E2AE0E9CF003E89DE /* Paywall.json in Resources */ = {isa = PBXBuildFile; fileRef = 556DD55D2AE0E9CF003E89DE /* Paywall.json */; };
 		559C22D22B90A9B600ACE7A3 /* paywall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */; };
 		559C22D32B90A9B600ACE7A3 /* onboarding3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5546F3BD2B9595E6004BEF7F /* MockProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProduct.swift; sourceTree = "<group>"; };
+		55570EE02B9F0E8B00284B45 /* Paywall-Single.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Paywall-Single.json"; sourceTree = "<group>"; };
 		556DD55D2AE0E9CF003E89DE /* Paywall.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Paywall.json; sourceTree = "<group>"; };
 		559C22CE2B90A9B600ACE7A3 /* paywall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = paywall.mp4; sourceTree = "<group>"; };
 		559C22CF2B90A9B600ACE7A3 /* onboarding3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding3.mp4; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				55BE9E002ADFA91300FFE81E /* LaunchScreen.storyboard */,
 				55BE9E032ADFA91300FFE81E /* Info.plist */,
 				556DD55D2AE0E9CF003E89DE /* Paywall.json */,
+				55570EE02B9F0E8B00284B45 /* Paywall-Single.json */,
 			);
 			path = PurchaseKitExample;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				559C22D52B90A9B600ACE7A3 /* onboarding1.mp4 in Resources */,
 				559C22D42B90A9B600ACE7A3 /* onboarding2.mp4 in Resources */,
 				556DD55E2AE0E9CF003E89DE /* Paywall.json in Resources */,
+				55570EE22B9F0ED400284B45 /* Paywall-Single.json in Resources */,
 				559C22D32B90A9B600ACE7A3 /* onboarding3.mp4 in Resources */,
 				55BE9DFD2ADFA91200FFE81E /* Main.storyboard in Resources */,
 			);

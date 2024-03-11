@@ -27,7 +27,8 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
     @IBOutlet weak var ratingLabel: UILabel!
     
     @IBOutlet weak var actionButton: ActionButton!
-
+    @IBOutlet weak var skipButton: UIButton!
+    
     public required init(viewModel: PurchaseKitScreenViewModel<ReviewPage>, output: PurchaseKitModuleOutput?) {
         self.viewModel = viewModel
         self.output = output
@@ -74,6 +75,9 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         actionButton.gradient = viewModel.colorScheme.gradient.primary
         actionButton.tintColor = viewModel.colorScheme.premiumAction.active
         actionButton.configure(with: viewModel.page.action)
+
+        skipButton.tintColor = viewModel.colorScheme.foreground.secondary
+        skipButton.setTitleColor(viewModel.colorScheme.foreground.secondary, for: .normal)
     }
 
     public func screenWillAppear() {
@@ -83,25 +87,30 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
         reviewStarsView.alpha = 0.0
         ratingLabel.alpha = 0.0
         actionButton.alpha = 0.0
+        skipButton.alpha = 0.0
 
         actionButton.isUserInteractionEnabled = true
         DispatchQueue.main.async {
             UIView.defaultSpringAnimation(duration: 1.0, delay: 0.3, animations: {
-                self.titleLabel.alpha = 1.0
-            })
-            UIView.defaultSpringAnimation(duration: 1.0, delay: 0.5, animations: {
-                self.subtitleLabel.alpha = 1.0
-            })
-            UIView.defaultSpringAnimation(duration: 1.0, delay: 0.7, animations: {
                 self.lottieAnimationView.play()
                 self.lottieAnimationView.alpha = 1.0
+
             })
-            UIView.defaultSpringAnimation(duration: 1.0, delay: 0.9, animations: {
+            UIView.defaultSpringAnimation(duration: 1.0, delay: 0.5, animations: {
                 self.reviewStarsView.alpha = 1.0
                 self.ratingLabel.alpha = 1.0
             })
+            UIView.defaultSpringAnimation(duration: 1.0, delay: 0.7, animations: {
+                self.titleLabel.alpha = 1.0
+            })
+            UIView.defaultSpringAnimation(duration: 1.0, delay: 0.9, animations: {
+                self.subtitleLabel.alpha = 1.0
+            })
             UIView.defaultSpringAnimation(duration: 1.0, delay: 1.1, options: [.allowUserInteraction], animations: {
                 self.actionButton.alpha = 1.0
+            })
+            UIView.defaultSpringAnimation(duration: 1.0, delay: 1.5, options: [.allowUserInteraction], animations: {
+                self.skipButton.alpha = 1.0
             })
         }
     }
@@ -123,6 +132,10 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
 
     // MARK: - Actions
 
+    @IBAction func skipButtonPressed(_ sender: UIButton) {
+        output?.moduleDidRequestNextPage(viewModel.page)
+    }
+    
     @IBAction func actionButtonPressed(_ sender: UIButton) {
         actionButton.startLoading()
 
