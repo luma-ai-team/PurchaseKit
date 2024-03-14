@@ -30,7 +30,7 @@ final class SettingsViewController: ViewController<SettingsViewModel, Any, Setti
 
             tableView.contentInsetAdjustmentBehavior = .never
             tableView.backgroundColor = PurchaseKit.shared.configuration.colorScheme.background.primary
-            tableView.separatorColor = PurchaseKit.shared.configuration.colorScheme.genericAction.inactive
+            tableView.separatorColor = PurchaseKit.shared.configuration.colorScheme.genericAction.inactive.withAlphaComponent(0.5)
             tableView.register(SettingsActionCell.nib, forCellReuseIdentifier: SettingsActionCell.reuseIdentifier)
             tableView.register(SettingsTitleHeaderView.self,
                                forHeaderFooterViewReuseIdentifier: SettingsTitleHeaderView.reuseIdentifier)

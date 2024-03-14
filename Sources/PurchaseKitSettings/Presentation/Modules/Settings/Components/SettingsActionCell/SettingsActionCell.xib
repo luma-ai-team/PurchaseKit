@@ -10,22 +10,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsActionCell" id="WRd-bd-Mdm" customClass="SettingsActionCell" customModule="PurchaseKitSettings">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="46"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WRd-bd-Mdm" id="PT2-2f-LH7">
-                <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="46"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-4E-noA">
-                        <rect key="frame" x="15.999999999999996" y="12.333333333333334" width="39.666666666666657" height="19.333333333333329"/>
+                        <rect key="frame" x="15.999999999999996" y="0.0" width="39.666666666666657" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="erS-gP-G99"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="lKi-4E-noA" firstAttribute="centerY" secondItem="PT2-2f-LH7" secondAttribute="centerY" id="8mS-ND-yki"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lKi-4E-noA" secondAttribute="bottom" id="9gw-2P-SlA"/>
                     <constraint firstItem="lKi-4E-noA" firstAttribute="leading" secondItem="PT2-2f-LH7" secondAttribute="leading" constant="16" id="AOa-HL-Z0f"/>
+                    <constraint firstItem="lKi-4E-noA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PT2-2f-LH7" secondAttribute="top" id="MIw-UT-3DJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

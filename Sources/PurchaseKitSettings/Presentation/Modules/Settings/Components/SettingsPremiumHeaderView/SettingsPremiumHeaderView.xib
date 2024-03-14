@@ -42,7 +42,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="FO7-ZW-SWG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2sf-SS-eH6"/>
                 <constraint firstItem="Be6-Ix-nC2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GwS-h3-GFx"/>
