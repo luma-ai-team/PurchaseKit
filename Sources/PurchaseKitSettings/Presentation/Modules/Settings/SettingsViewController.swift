@@ -30,7 +30,7 @@ final class SettingsViewController: ViewController<SettingsViewModel, Any, Setti
 
             tableView.contentInsetAdjustmentBehavior = .never
             tableView.backgroundColor = PurchaseKit.shared.configuration.colorScheme.background.primary
-            tableView.separatorColor = PurchaseKit.shared.configuration.colorScheme.foreground.secondary.withAlphaComponent(0.25)
+            tableView.separatorColor = PurchaseKit.shared.configuration.colorScheme.genericAction.inactive
             tableView.register(SettingsActionCell.nib, forCellReuseIdentifier: SettingsActionCell.reuseIdentifier)
             tableView.register(SettingsTitleHeaderView.self,
                                forHeaderFooterViewReuseIdentifier: SettingsTitleHeaderView.reuseIdentifier)
@@ -110,11 +110,6 @@ extension SettingsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.frame.origin.x = 16.0
-        cell.frame.size.width = tableView.bounds.width - 32.0
-    }
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.sections[indexPath.section].actions[indexPath.row].handler()
