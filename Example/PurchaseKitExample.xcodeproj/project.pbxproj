@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552BE3032BA1B72A00A5A478 /* PurchaseKitSettings in Frameworks */ = {isa = PBXBuildFile; productRef = 552BE3022BA1B72A00A5A478 /* PurchaseKitSettings */; };
 		5546F3BE2B9595E6004BEF7F /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546F3BD2B9595E6004BEF7F /* MockProduct.swift */; };
 		55570EE22B9F0ED400284B45 /* Paywall-Single.json in Resources */ = {isa = PBXBuildFile; fileRef = 55570EE02B9F0E8B00284B45 /* Paywall-Single.json */; };
 		556DD55E2AE0E9CF003E89DE /* Paywall.json in Resources */ = {isa = PBXBuildFile; fileRef = 556DD55D2AE0E9CF003E89DE /* Paywall.json */; };
@@ -52,6 +53,7 @@
 			files = (
 				55ACBBA62AE8FC3D00A8C98F /* PurchaseKitModules in Frameworks */,
 				55ACBBA82AE8FC3D00A8C98F /* PurchaseKitUI in Frameworks */,
+				552BE3032BA1B72A00A5A478 /* PurchaseKitSettings in Frameworks */,
 				55ACBBA42AE8FC3D00A8C98F /* PurchaseKitAdapty in Frameworks */,
 				55ACBBAA2AE8FF8800A8C98F /* PurchaseKitCore in Frameworks */,
 			);
@@ -151,6 +153,7 @@
 				55ACBBA52AE8FC3D00A8C98F /* PurchaseKitModules */,
 				55ACBBA72AE8FC3D00A8C98F /* PurchaseKitUI */,
 				55ACBBA92AE8FF8800A8C98F /* PurchaseKitCore */,
+				552BE3022BA1B72A00A5A478 /* PurchaseKitSettings */,
 			);
 			productName = TimberExample;
 			productReference = 55BE9DF22ADFA91200FFE81E /* PurchaseKitExample.app */;
@@ -363,6 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7RHRYCY4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PurchaseKitExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -376,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rm-applications.teeth-white-whitening";
+				PRODUCT_BUNDLE_IDENTIFIER = co.lumaai.purchasekit.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -391,6 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7RHRYCY4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PurchaseKitExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -404,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rm-applications.teeth-white-whitening";
+				PRODUCT_BUNDLE_IDENTIFIER = co.lumaai.purchasekit.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -436,6 +441,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		552BE3022BA1B72A00A5A478 /* PurchaseKitSettings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PurchaseKitSettings;
+		};
 		55ACBBA32AE8FC3D00A8C98F /* PurchaseKitAdapty */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PurchaseKitAdapty;

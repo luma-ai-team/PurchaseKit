@@ -15,7 +15,7 @@
       "location" : "https://github.com/disabled/GenericModule",
       "state" : {
         "branch" : "master",
-        "revision" : "8bf4326c905e722b956d467d31ca483a406e0788"
+        "revision" : "ceba785d6d458d95817c8af89af917270f8fd554"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/luma-ai-team/LumaKit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7b846dbd0dd793ee474df1366893ea54c4a82d89"
+        "revision" : "0b7a5cb91fbb43087a67364354e06e041b2cf6aa"
       }
     }
   ],

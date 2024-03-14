@@ -11,6 +11,7 @@ import PurchaseKitCore
 import PurchaseKitAdapty
 import PurchaseKitModules
 import PurchaseKitUI
+import PurchaseKitSettings
 
 class ViewController: UIViewController {
 
@@ -32,12 +33,10 @@ class ViewController: UIViewController {
         var configuration = PurchaseKitConfiguration()
         configuration.colorScheme = colorScheme
 
+        configuration.contactEmail = "hello@foofle.com"
         configuration.appStoreApplicationIdentifier = "1454542238"
         configuration.privacyPolicyURL = .init(string: "https://google.com")
-
-//        let factory = AdaptyServiceFactory<DefaultRemoteConfig>(key: "public_live_QnCyopGl.ONWn4xULsvbDCV3z3EIT",
-//                                                                remoteConfigFallback: .init())
-//        factory.analyticsProxy = DummyAnalyticsService()
+        configuration.termsOfServiceURL = .init(string: "https://google.com")
 
         let url: URL! = Bundle.main.url(forResource: "Paywall.json", withExtension: nil)
         let weeklyProduct = MockProduct(price: 4.99,
@@ -67,12 +66,13 @@ class ViewController: UIViewController {
         PurchaseKit.shared.registerDefaultModules()
         PurchaseKit.shared.start(with: configuration, dependencies: factory)
         DispatchQueue.main.async {
-            self.showPaywall()
+            self.showSettings()
         }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        showPaywall()
+        //showPaywall()
+        showSettings()
     }
 
     func showPaywall() {
@@ -88,5 +88,11 @@ class ViewController: UIViewController {
                                    transitionStyle: .coverVertical,
                                    bindings: bindings,
                                    shouldWaitForProductFetch: false)
+    }
+
+    func showSettings() {
+        let state = SettingsState(paywallIdentifier: "PKOnboarding")
+        state.premiumHeaderViewModel.assetURL = Bundle.main.url(forResource: "paywall", withExtension: "mp4")
+        PurchaseKit.shared.showAppSettings(with: state, on: self)
     }
 }

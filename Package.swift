@@ -10,7 +10,8 @@ let package = Package(
         .library(name: "PurchaseKitCore", targets: ["PurchaseKitCore"]),
         .library(name: "PurchaseKitUI", targets: ["PurchaseKitUI"]),
         .library(name: "PurchaseKitAdapty", targets: ["PurchaseKitAdapty"]),
-        .library(name: "PurchaseKitModules", targets: ["PurchaseKitModules"])
+        .library(name: "PurchaseKitModules", targets: ["PurchaseKitModules"]),
+        .library(name: "PurchaseKitSettings", targets: ["PurchaseKitSettings"])
     ],
     dependencies: [
         .package(url: "https://github.com/adaptyteam/AdaptySDK-iOS.git", .upToNextMajor(from: "2.2.0")),
@@ -25,6 +26,16 @@ let package = Package(
                 .product(name: "LumaKit", package: "LumaKit")
             ],
             path: "Sources/PurchaseKitCore",
+            resources: []),
+        .target(
+            name: "PurchaseKitSettings",
+            dependencies: [
+                .target(name: "PurchaseKitCore"),
+                .target(name: "PurchaseKitUI"),
+                .product(name: "GenericModule", package: "GenericModule"),
+                .product(name: "LumaKit", package: "LumaKit")
+            ],
+            path: "Sources/PurchaseKitSettings",
             resources: []),
         .target(
             name: "PurchaseKitUI",

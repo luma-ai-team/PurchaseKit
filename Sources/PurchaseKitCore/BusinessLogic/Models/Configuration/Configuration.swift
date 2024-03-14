@@ -16,6 +16,7 @@ public struct PurchaseKitConfiguration {
 
     public var privacyPolicyURL: URL?
     public var termsOfServiceURL: URL?
+    public var contactEmail: String?
     public var appStoreApplicationIdentifier: String?
 
     private init(isValid: Bool) {
