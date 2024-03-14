@@ -18,6 +18,6 @@ final class SettingsTitleHeaderView: UITableViewHeaderFooterView {
 
     func update(title: String, colorScheme: ColorScheme) {
         textLabel?.text = title
-        textLabel?.textColor = colorScheme.foreground.secondary
+        textLabel?.textColor = colorScheme.genericAction.inactive
     }
 }

@@ -26,7 +26,7 @@ final class SettingsViewController: ViewController<SettingsViewModel, Any, Setti
     override func viewDidLoad() {
         super.viewDidLoad {
             dismissButton.tintColor = PurchaseKit.shared.configuration.colorScheme.foreground.primary
-            versionLabel.textColor = PurchaseKit.shared.configuration.colorScheme.foreground.secondary
+            versionLabel.textColor = PurchaseKit.shared.configuration.colorScheme.genericAction.inactive
 
             tableView.contentInsetAdjustmentBehavior = .never
             tableView.backgroundColor = PurchaseKit.shared.configuration.colorScheme.background.primary
