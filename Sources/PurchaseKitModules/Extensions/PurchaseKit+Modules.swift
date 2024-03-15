@@ -56,6 +56,7 @@ public extension PurchaseKit {
         let controller = PurchaseKitLoadingViewController(colorScheme: configuration.colorScheme)
         target.rootViewController = controller
 
+        registerDefaultModules()
         guard dependencies.userSettingsService.isOnboardingCompleted == false else {
             setupLandingState(animated: false)
             return
