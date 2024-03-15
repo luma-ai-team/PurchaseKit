@@ -74,7 +74,7 @@ public final class AdaptyService<Config: RemoteConfig>: PaywallService, StoreSer
         self.remoteConfig = remoteConfigFallback
         Adapty.activate(key, customerUserId: userId, { error in
             if let error = error {
-                print("Error activating adapty: ", error.localizedDescription)
+                print("[EE] Error activating adapty: ", error.localizedDescription)
             }
 
             configurator?(Adapty.self)

@@ -352,9 +352,6 @@ final class LongFormSubscriptionViewController: UIViewController, PurchaseKitMod
             product = selectedProductPair.baseProduct
         }
 
-        #if DEBUG
-        print(product.identifier)
-        #endif
         output?.moduleDidRequestPurchase(viewModel.page, product: product)
     }
 

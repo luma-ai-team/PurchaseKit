@@ -65,9 +65,16 @@ class ViewController: UIViewController {
 
         PurchaseKit.shared.registerDefaultModules()
         PurchaseKit.shared.start(with: configuration, dependencies: factory)
-        DispatchQueue.main.async {
-            self.showSettings()
+        PurchaseKit.shared.dependencies.userSettingsService.isOnboardingCompleted = false
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard PurchaseKit.shared.dependencies.userSettingsService.isOnboardingCompleted == false else {
+            return
         }
+
+        PurchaseKit.shared.showOnboardingIfNeeded(identifier: "PKOnboarding", landingViewController: self)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

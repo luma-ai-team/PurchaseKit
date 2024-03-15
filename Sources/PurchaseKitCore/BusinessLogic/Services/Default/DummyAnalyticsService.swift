@@ -11,6 +11,6 @@ open class DummyAnalyticsService: AnalyticsService {
     public init() {}
 
     public func log(_ event: AnalyticsEvent) {
-        print("Event: \(event.identifier) (\(event.parameters))")
+        print("[II] Event: \(event.identifier) (\(event.parameters))")
     }
 }
