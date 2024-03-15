@@ -87,7 +87,10 @@ extension SettingsCoordinator: SettingsModuleOutput {
         bindings.completionHandler = { [weak sender] in
             sender?.update(force: false, animated: false)
         }
-        PurchaseKit.shared.present(identifier: identifier, on: topViewController, bindings: bindings)
+        PurchaseKit.shared.present(identifier: identifier, 
+                                   on: topViewController,
+                                   transitionStyle: .coverVertical,
+                                   bindings: bindings)
     }
 
     public func settingsModuleDidRequestRestore(_ sender: SettingsModuleInput) {
