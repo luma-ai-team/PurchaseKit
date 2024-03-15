@@ -68,7 +68,7 @@ public extension PurchaseKit {
             setupLandingState(animated: true)
         }
 
-        PurchaseKit.shared.present(identifier: "PKOnboarding",
+        PurchaseKit.shared.present(identifier: identifier,
                                    on: controller,
                                    bindings: bindindgs,
                                    failure: { _ in
