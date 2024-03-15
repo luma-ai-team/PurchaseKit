@@ -35,7 +35,7 @@ final public class VideoUserContent: UIView, UserContent {
         return self
     }
 
-    init(playerItem: AVPlayerItem) {
+    public init(playerItem: AVPlayerItem) {
         super.init(frame: .zero)
         player.replaceCurrentItem(with: playerItem)
         NotificationCenter.default.addObserver(self,
