@@ -38,6 +38,7 @@ final class SettingsPremiumHeaderView: UITableViewHeaderFooterView {
         }
         playerView.backgroundColor = colorScheme.background.primary
         playerView.player = playerLooper.player
+        playerLooper.player.isMuted = true
         playerLooper.play()
 
         gradientView.gradient = .vertical(colors: [colorScheme.background.primary.withAlphaComponent(0.25),
