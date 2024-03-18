@@ -42,7 +42,9 @@ public class ReviewViewController: UIViewController, PurchaseKitModule, Purchase
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.clipsToBounds = true
         view.backgroundColor = viewModel.colorScheme.background.primary
+
         bottomGradientView.gradient = .vertical(colors: [
             viewModel.colorScheme.background.primary.withAlphaComponent(0.0),
             viewModel.colorScheme.background.primary.withAlphaComponent(0.5)
