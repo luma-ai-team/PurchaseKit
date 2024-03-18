@@ -21,7 +21,12 @@ final class SettingsPremiumHeaderView: UITableViewHeaderFooterView {
 
     weak var delegate: SettingsPremiumHeaderViewDelegate?
 
-    private lazy var playerLooper: PlayerLooper = .init(url: .dummy)
+    private lazy var playerLooper: PlayerLooper = {
+        let looper = PlayerLooper(url: .dummy)
+        looper.player.isMuted = true
+        return looper
+    }()
+
     @IBOutlet weak var playerView: PlayerView!
     @IBOutlet weak var gradientView: GradientView!
     @IBOutlet weak var titleLabel: UILabel!
