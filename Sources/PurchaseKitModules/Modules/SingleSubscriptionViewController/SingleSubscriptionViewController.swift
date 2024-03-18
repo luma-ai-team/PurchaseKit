@@ -107,7 +107,13 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
     }
 
     public func screenWillAppear() {
-        playerLooper.play()
+        if let content = viewModel.content.userContent {
+            content.start()
+        }
+        else {
+            playerLooper.play()
+        }
+
         dismissButton.animateIn(with: viewModel.page.closeAction)
         linksStackView.animateIn(with: viewModel.page.closeAction)
 
@@ -120,7 +126,6 @@ public class SingleSubscriptionViewController: UIViewController, PurchaseKitModu
             featureView.alpha = 0.0
         }
 
-        viewModel.content.userContent?.start()
         actionButton.isUserInteractionEnabled = true
         DispatchQueue.main.async {
             UIView.defaultSpringAnimation(duration: 1.0, delay: 0.3, animations: {

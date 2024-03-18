@@ -155,7 +155,13 @@ final class LongFormSubscriptionViewController: UIViewController, PurchaseKitMod
     }
 
     public func screenWillAppear() {
-        playerLooper.play()
+        if let content = viewModel.content.userContent {
+            content.start()
+        }
+        else {
+            playerLooper.play()
+        }
+
         dismissButton.animateIn(with: viewModel.page.closeAction)
         linksStackView.animateIn(with: viewModel.page.closeAction)
 
@@ -171,7 +177,8 @@ final class LongFormSubscriptionViewController: UIViewController, PurchaseKitMod
     }
 
     public func screenDidDisappear() {
-        //
+        playerLooper.stop()
+        viewModel.content.userContent?.stop()
     }
 
     public func update(with viewModel: PurchaseKitScreenViewModel<PageType>, force: Bool, animated: Bool) {

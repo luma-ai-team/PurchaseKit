@@ -37,6 +37,9 @@ final public class VideoUserContent: UIView, UserContent {
 
     public init(playerItem: AVPlayerItem) {
         super.init(frame: .zero)
+        playerLayer?.videoGravity = .resizeAspectFill
+        playerLayer?.player = player
+
         player.replaceCurrentItem(with: playerItem)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(playerDidPlayToEndTime),

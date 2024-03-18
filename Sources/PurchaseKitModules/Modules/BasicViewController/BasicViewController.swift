@@ -83,7 +83,13 @@ public class BasicViewController: UIViewController, PurchaseKitModule, PurchaseK
     }
 
     public func screenWillAppear() {
-        playerLooper.play()
+        if let content = viewModel.content.userContent {
+            content.start()
+        }
+        else {
+            playerLooper.play()
+        }
+        
         dismissButton.animateIn(with: viewModel.page.closeAction)
 
         titleLabel.alpha = 0.0
@@ -91,7 +97,6 @@ public class BasicViewController: UIViewController, PurchaseKitModule, PurchaseK
         actionButton.alpha = 0.0
         linksStackView.alpha = 0.0
 
-        viewModel.content.userContent?.start()
         actionButton.isUserInteractionEnabled = true
         DispatchQueue.main.async {
             UIView.defaultSpringAnimation(duration: 1.0, delay: 0.3, animations: {
