@@ -12,7 +12,7 @@ public protocol HasUserSettingsService {
 }
 
 public protocol UserSettingsService: AnyObject {
-    var userIdentifier: String { get }
+    var userIdentifier: String { get set }
     
     var isOnboardingCompleted: Bool { get set }
     var premiumEventTriggerCount: Int { get set }

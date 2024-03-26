@@ -9,18 +9,27 @@ import Foundation
 import LumaKit
 
 public final class DefaultUserSettingsService: UserSettingsService {
+    enum Constants {
+        static let userIdentifierKey: String = "userIdentifier"
+    }
+
     private static var container: UserDefaults = .init(suiteName: "purchase-kit") ?? .standard
 
     public var userIdentifier: String {
-        let key = "userIdentifier"
-        guard let identifier = Self.container.string(forKey: key) else {
-            let identifier = UUID().uuidString
-            Self.container.set(identifier, forKey: key)
-            CFPreferencesAppSynchronize(kCFPreferencesCurrentApplication)
+        get {
+            guard let identifier = Self.container.string(forKey: Constants.userIdentifierKey) else {
+                let identifier = UUID().uuidString
+                Self.container.set(identifier, forKey: Constants.userIdentifierKey)
+                CFPreferencesAppSynchronize(kCFPreferencesCurrentApplication)
+                return identifier
+            }
+
             return identifier
         }
-
-        return identifier
+        set {
+            Self.container.set(newValue, forKey: Constants.userIdentifierKey)
+            CFPreferencesAppSynchronize(kCFPreferencesCurrentApplication)
+        }
     }
 
     @UserDefault(key: "isOnboardingCompleted", defaultValue: false, container: container)
